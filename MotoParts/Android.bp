@@ -1,0 +1,12 @@
+android_app {
+    name MotoParts,
+    srcs [
+        src.kt,
+    ],
+    platform_apis true,
+    certificate platform,
+    jni_libs [libmotoparts_jni],
+    static_libs [androidx.preference_preference],
+    defaults [SettingsLibDefaults],
+    required [vendor.fpsensor.hardware.parts@1.0-service],
+}

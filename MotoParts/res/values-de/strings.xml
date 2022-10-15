@@ -1,0 +1,72 @@
+<!-- Copyright (C) 2021 The SamsungParts Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+   <string name="advanced_settings">MotoParts</string>
+   <string name="advanced_settings_summary">Gerät Spezifische Tweaks</string>
+   <!-- Display category -->
+   <string name="display_category">Display</string>
+   <!-- FPS Info -->
+   <string name="fps_info_title">FPS Info Overlay</string>
+   <string name="fps_info_summary">Zeige Overlay mit aktueller Frames per Second. (FPS)</string>
+   <!-- Speaker category -->
+   <string name="speaker_category">Sound</string>
+   <!-- Clear Speaker -->
+   <string name="clear_speaker_title">Lautsprecher reinigen</string>
+   <string name="clear_speaker_summary">Spiele ein 30 sekündigen Ton ab, um den Lautsprecher zu reinigen.</string>
+   <string name="clear_speaker_description">Starte die Eigenschaft, um den Lautsprecher von Schmutz und Staub zu befreien. Setzte die Lautstärke dabei auf das Maximum.\n\nWenn in dem Lautsprecher zuviel Schmutz und Staub ist, führe dies 2-5 mal aus.</string>
+   <!-- GPU Category -->
+   <string name="misc_category">Sonstiges</string>
+   <!-- Battery -->
+   <string name="fastcharge_category">Batterie</string>
+   <string name="fastcharge_2nd_title">Schnellladen Einstellung</string>
+   <string name="charge_title">Laden Einstellung</string>
+   <string name="charge_summary">Aktiviere/Deaktiviere den Ladevorgang hier.</string>
+   <string name="fastcharge_title">Batterie Info und Einstellungen</string>
+   <string name="fastcharge_summary">Aktiviere/Deaktiviere Schnellladen Eigenschaft</string>
+   <string name="fastcharge_description">Verwalte die Ladevorgang Eigenschaft hier.</string>
+   <string name="battery_info_title">Sonstige Batterie Info</string>
+   <string name="battery_info_summary">Sektion für Geeks</string>
+   <string name="battery_max_capa">Batterie Max Kapazität (mAh)</string>
+   <string name="battery_status">Batterie Status</string>
+   <string name="battery_chrged_up_to">Batterie geladen in (%)</string>
+   <string name="battery_chrged_up_to_mah">Batterie geladen in (mAh)</string>
+   <string name="battery_temp">Aktuelle Batterie Temperatur</string>
+   <string name="battery_current">Batterie aktuell (mA)</string>
+   <!-- Label for feature switch -->
+   <string name="switch_bar_on">An</string>
+   <!-- Label for feature switch -->
+   <string name="switch_bar_off">Aus</string>
+   <!-- Custom seekbar -->
+   <string name="custom_seekbar_value">Werte: <xliff:g id="v">%s</xliff:g></string>
+   <string name="custom_seekbar_default_value">Standard</string>
+   <string name="custom_seekbar_default_value_to_set">Standard Wert: <xliff:g id="v">%s</xliff:g>\nLanges drücken um zu setzen.</string>
+   <string name="custom_seekbar_default_value_is_set">Standard Werte sind gesetzt.</string>
+   <!-- SmartCharge -->
+   <string name="smartcharge_title">Simple SmartCharge Implementation</string>
+   <string name="smartcharge_switch">Enable The Implementation</string>
+   <string name="choose_limit_title">Adjust Charge Limit %</string>
+   <string name="choose_summary">Tap here to adjust the settings</string>
+   <string name="choose_restart_title">Adjust Charge Restart %</string>
+   <string name="limit_title">Current Limit Charge % Setting</string>
+   <string name="restart_title">Current Restart Charge % Setting</string>
+   <string name="limit_stat_title">Stats of limited charging count since last boot</string>
+   <string name="restart_stat_title">Stats of restarted charging count since last boot</string>
+   <string name="apply">Apply current settings</string>
+   <string name="adjust_title">Move the seekbar to adjust values</string>
+   <string name="adjust_summary">From the most left, the value will move by -10 -1 0 1 10</string>
+   <string name="smartcharge_description">This is a simple smartcharge implementation based on
+	   battery percentage. If the battery percent is above limit, the charging stops, or if it is 
+	   below restart, it charges again. Said to improve battery life in long term</string>
+</resources>

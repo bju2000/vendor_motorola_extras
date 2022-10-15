@@ -1,0 +1,95 @@
+android_app_import {
+    name: "MotoSignatureApp",
+    owner: "motorola",
+    apk: "proprietary/app/MotoSignatureApp/MotoSignatureApp.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    required: [
+        "MotoSignature2App",
+        "com.motorola.motosignature",
+        "moto-checkin",
+        "moto-core_services",
+        "moto-settings",
+    ],
+}
+
+android_app_import {
+    name: "MotoSignature2App",
+    owner: "motorola",
+    apk: "proprietary/app/MotoSignature2App/MotoSignature2App.apk",
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}
+
+prebuilt_etc {
+    name: "com.motorola.motosignature_permissions",
+    owner: "motorola",
+    sub_dir: "permissions",
+    src: "proprietary/etc/permissions/com.motorola.motosignature.xml",
+    filename_from_src: true,
+}
+
+prebuilt_etc {
+    name: "moto-checkin_permissions",
+    owner: "motorola",
+    sub_dir: "permissions",
+    src: "proprietary/etc/permissions/moto-checkin.xml",
+    filename_from_src: true,
+}
+
+prebuilt_etc {
+    name: "moto-core_services_permissions",
+    owner: "motorola",
+    sub_dir: "permissions",
+    src: "proprietary/etc/permissions/moto-core_services.xml",
+    filename_from_src: true,
+}
+
+prebuilt_etc {
+    name: "moto-settings_permissions",
+    owner: "motorola",
+    sub_dir: "permissions",
+    src: "proprietary/etc/permissions/moto-settings.xml",
+    filename_from_src: true,
+}
+
+dex_import {
+    name: "com.motorola.motosignature",
+    owner: "motorola",
+    jars: ["proprietary/framework/com.motorola.motosignature.jar"],
+    required: [
+        "com.motorola.motosignature_permissions",
+    ],
+}
+
+dex_import {
+    name: "moto-checkin",
+    owner: "motorola",
+    jars: ["proprietary/framework/moto-checkin.jar"],
+    required: [
+        "moto-checkin_permissions",
+    ],
+}
+
+dex_import {
+    name: "moto-core_services",
+    owner: "motorola",
+    jars: ["proprietary/framework/moto-core_services.jar"],
+    required: [
+        "moto-core_services_permissions",
+    ],
+}
+
+dex_import {
+    name: "moto-settings",
+    owner: "motorola",
+    jars: ["proprietary/framework/moto-settings.jar"],
+    required: [
+        "moto-settings_permissions",
+    ],
+}
+

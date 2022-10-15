@@ -1,0 +1,12 @@
+android_app {
+    name: "MotCamera2Tunner",
+    resource_dirs: ["res"],
+    sdk_version: "29",
+    min_sdk_version: "29",
+    target_sdk_version: "30",
+    dex_preopt: {
+        enabled: false,
+    },
+    installable: false,
+    product_specific: true,
+}

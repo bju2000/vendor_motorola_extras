@@ -1,0 +1,72 @@
+<!-- Copyright (C) 2020 The Xiaomi-SM6250 Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+   <string name="advanced_settings">Parti Samsung</string>
+   <string name="advanced_settings_summary">Tweak-uri specifice dispozitivului</string>
+   <!-- Display category -->
+   <string name="display_category">Afisaj</string>
+   <!-- FPS Info -->
+   <string name="fps_info_title">FPS Overlay</string>
+   <string name="fps_info_summary">Arata un overlay cu cate FPS-uri sunt</string>
+   <!-- Speaker category -->
+   <string name="speaker_category">Speaker</string>
+   <!-- Clear Speaker -->
+   <string name="clear_speaker_title">Curata speakerul</string>
+   <string name="clear_speaker_summary">Audiaza un sunet de 30 de secunde cu care sa cureti speakerul</string>
+   <string name="clear_speaker_description">Utilizeaza acest feature odata sau de doua ori daca speakerul tau este blocat de praf. Seteaza volumul media la maxim.\n\nDaca speakerul este blocat greu, utilizeaza acest feature de 2-5 ori miscand device-ul cu speakerul in jos.</string>
+   <!-- GPU Category -->
+   <string name="misc_category">Misc</string>
+   <!-- Battery -->
+   <string name="fastcharge_category">Baterie</string>
+   <string name="fastcharge_2nd_title">Setari FastCharge</string>
+   <string name="charge_title">Setari incarcare.</string>
+   <string name="charge_summary">Activeaza/Dezactiveaza incarcarea aici.</string>
+   <string name="fastcharge_title">Informatii baterie si Setari</string>
+   <string name="fastcharge_summary">Activeaza/Dezactiveaza feature-ul Fastcharge</string>
+   <string name="fastcharge_description">Manage Charging Feature here.</string>
+   <string name="battery_info_title">Battery Misc Info</string>
+   <string name="battery_info_summary">Section for geeks</string>
+   <string name="battery_max_capa">Capacitate maxima baterie (mAh)</string>
+   <string name="battery_status">Status baterie</string>
+   <string name="battery_chrged_up_to">Bateria se poate incarca pana la (%)</string>
+   <string name="battery_chrged_up_to_mah">Bateria s-a incarcat pana la (mAh)</string>
+   <string name="battery_temp">Temperatura actuala a bateriei</string>
+   <string name="battery_current">Curent Baterie (mA)</string>
+   <!-- Label for feature switch -->
+   <string name="switch_bar_on">Activat</string>
+   <!-- Label for feature switch -->
+   <string name="switch_bar_off">Dezactivat</string>
+   <!-- Custom seekbar -->
+   <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
+   <string name="custom_seekbar_default_value">Default</string>
+   <string name="custom_seekbar_default_value_to_set">Valoare Default: <xliff:g id="v">%s</xliff:g>\nTine apasat pentru a face modificari.</string>
+   <string name="custom_seekbar_default_value_is_set">Valoarea Default este setata</string>
+   <!-- SmartCharge -->
+   <string name="smartcharge_title">Simple SmartCharge Implementation</string>
+   <string name="smartcharge_switch">Enable The Implementation</string>
+   <string name="choose_limit_title">Adjust Charge Limit %</string>
+   <string name="choose_summary">Tap here to adjust the settings</string>
+   <string name="choose_restart_title">Adjust Charge Restart %</string>
+   <string name="limit_title">Current Limit Charge % Setting</string>
+   <string name="restart_title">Current Restart Charge % Setting</string>
+   <string name="limit_stat_title">Stats of limited charging count since last boot</string>
+   <string name="restart_stat_title">Stats of restarted charging count since last boot</string>
+   <string name="apply">Apply current settings</string>
+   <string name="adjust_title">Move the seekbar to adjust values</string>
+   <string name="adjust_summary">From the most left, the value will move by -10 -1 0 1 10</string>
+   <string name="smartcharge_description">This is a simple smartcharge implementation based on
+	   battery percentage. If the battery percent is above limit, the charging stops, or if it is 
+	   below restart, it charges again. Said to improve battery life in long term</string>
+</resources>

@@ -1,0 +1,58 @@
+soong_namespace {
+}
+
+android_app_import {
+	name: "MotoLiveWallpaper2",
+	owner: "motorola",
+	apk: "product/app/MotoLiveWallpaper2/MotoLiveWallpaper2.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+      required: [
+		"MotoSignature2App",
+		"MotoSignatureApp",
+		"feature-com.motorola.motolivewallpaper.support.racer",
+		"hiddenapi-whitelist-com.motorola.livewallpaper",
+	],
+}
+
+android_app_import {
+	name: "MotoLiveWallpaper3",
+	owner: "motorola",
+	apk: "system_ext/priv-app/MotoLiveWallpaper3/MotoLiveWallpaper3.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+      required: [
+		"MotoSignature2App",
+		"MotoSignatureApp",
+		"feature-com.motorola.motolivewallpaper.support.racer",
+		"feature-com.motorola.motolivewallpaper3",
+	],
+}
+
+prebuilt_etc {
+    name: "feature-com.motorola.motolivewallpaper.support.racer.xml",
+    src: "feature-com.motorola.motolivewallpaper.support.racer.xml",
+    sub_dir: "permissions",
+    product: true,
+}
+
+prebuilt_etc {
+    name: "feature-com.motorola.motolivewallpaper3.xml",
+    src: "feature-com.motorola.motolivewallpaper3.xml",
+    sub_dir: "permissions",
+    system_ext_specific: true,
+}
+prebuilt_etc {
+    name: "hiddenapi-whitelist-com.motorola.livewallpaper.xml",
+    src: "hiddenapi-whitelist-com.motorola.livewallpaper.xml",
+    sub_dir: "sysconfig",
+    system_ext_specific: true,
+}
