@@ -14,7 +14,6 @@ Obligatory!
 ```
 MOTOEXTRAS_MOTOCAMERA2 := true
 ```
-By: Nemesis Developers
 By: [Nemesis Developers](https://github.com/NemesisDevelopers)
 
 ```
