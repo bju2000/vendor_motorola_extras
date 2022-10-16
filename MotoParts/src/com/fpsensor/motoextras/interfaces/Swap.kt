@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.motoextras.interfaces
+package com.fpsensor.motoextras.interfaces
 
 import android.os.ServiceManager
 import vendor.fpsensore.parts.ISwapOnData

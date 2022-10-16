@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.eurekateam.samsungextras.interfaces
+package com.fpsensor.motoextras.interfaces
 
 import android.os.ServiceManager
 import vendor.fpsensor.hardware.parts.DisplaySys

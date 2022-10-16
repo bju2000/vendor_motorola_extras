@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fpsensor.motogextras.interfaces
+package com.fpsensor.motoextras.interfaces
 
 import android.os.ServiceManager
 import vendor.fpsensor.hardware.parts.BatterySys
