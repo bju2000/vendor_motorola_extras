@@ -1,6 +1,5 @@
 cc_library_shared {
     name: "libmotoparts_jni",
-    defaults: ["fpsensor_defaults"],
     cflags: [
         "-Wall",
         "-Wextra",
@@ -14,6 +13,5 @@ cc_library_shared {
         "libhidlbase",
         "liblog",
         "libutils",
-        "vendor.fpsensor.hardware.parts@1.0",
     ],
 }

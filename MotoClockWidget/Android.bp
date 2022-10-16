@@ -21,14 +21,14 @@ android_app_import {
 
 prebuilt_etc {
     name: "com.motorola.timeweatherwidget.xml",
-    src: "com.motorola.timeweatherwidget.xml",
+    src: "product/etc/permissions/com.motorola.timeweatherwidget.xml",
     sub_dir: "permissions",
-    product: true,
+    product_specific: true,
 }
 
 prebuilt_etc {
     name: "hiddenapi-whitelist-com.motorola.timeweatherwidget.xml",
-    src: "hiddenapi-whitelist-com.motorola.timeweatherwidget.xml",
+    src: "product/etc/sysconfig/hiddenapi-whitelist-com.motorola.timeweatherwidget.xml",
     sub_dir: "sysconfig",
-    product: true,
+    product_specific: true,
 }

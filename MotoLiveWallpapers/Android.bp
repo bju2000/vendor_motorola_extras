@@ -39,20 +39,20 @@ android_app_import {
 
 prebuilt_etc {
     name: "feature-com.motorola.motolivewallpaper.support.racer.xml",
-    src: "feature-com.motorola.motolivewallpaper.support.racer.xml",
+    src: "product/etc/permissions/feature-com.motorola.motolivewallpaper.support.racer.xml",
     sub_dir: "permissions",
-    product: true,
+    product_specific: true,
 }
 
 prebuilt_etc {
     name: "feature-com.motorola.motolivewallpaper3.xml",
-    src: "feature-com.motorola.motolivewallpaper3.xml",
+    src: "system_ext/etc/permissions/feature-com.motorola.motolivewallpaper3.xml",
     sub_dir: "permissions",
     system_ext_specific: true,
 }
 prebuilt_etc {
     name: "hiddenapi-whitelist-com.motorola.livewallpaper.xml",
-    src: "hiddenapi-whitelist-com.motorola.livewallpaper.xml",
+    src: "system_ext/etc/sysconfig/hiddenapi-whitelist-com.motorola.livewallpaper.xml",
     sub_dir: "sysconfig",
     system_ext_specific: true,
 }
