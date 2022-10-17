@@ -16,20 +16,9 @@
 
 package com.fpsensor.motoextras.interfaces
 
-import android.os.ServiceManager
-import vendor.fpsensore.parts.ISwapOnData
-
-class Swap {
-    private val mSwap: ISwapOnData
-    init {
-        mSwap = ISwapOnData.Stub.asInterface(ServiceManager.waitForDeclaredService("vendor.eureka.hardware.parts.ISwapOnData/default"))
-    }
-
-    external fun setSwapOn(mCallBackEnabled: Boolean)
-    fun setSwapOff() = mSwap.setSwapOff()
-    fun mkFile(mSize: Int) = mSwap.makeSwapFile(mSize)
-    fun delFile() = mSwap.removeSwapFile()
-    fun isLocked(): Boolean = mSwap.isMutexLocked()
+object Swap {
+    external fun setSwapOn(mEnabled: Boolean)
+    external fun setSize(mSize: Int)
     external fun getFreeSpace(): Double
     external fun getSwapSize(): Long
 }

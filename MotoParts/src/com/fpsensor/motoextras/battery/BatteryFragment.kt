@@ -82,10 +82,7 @@ class BatteryFragment : PreferenceFragmentCompat(), Preference.OnPreferenceChang
             if (mPoolExecutor == null) {
                 mPoolExecutor = ScheduledThreadPoolExecutor(2)
                 mPoolExecutor!!.scheduleWithFixedDelay(
-                    mScheduler,
-                    0,
-                    2,
-                    TimeUnit.SECONDS
+                    mScheduler, 0, 2, TimeUnit.SECONDS
                 )
             }
         } else {

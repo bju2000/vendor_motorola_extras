@@ -1,0 +1,10 @@
+service parts-hal /system/bin/vendor.fpsensor.hardware.parts@1.0-service
+    interface vendor.fpsensor.hardware.parts@1.0::IBatteryStats default
+    interface vendor.fpsensor.hardware.parts@1.0::IDisplayConfigs default
+    interface vendor.fpsensor.hardware.parts@1.0::ISwapOnData default
+    class hal
+    user root
+    group root
+
+on post-fs-data
+    mkdir /data/swap 0755 root root encryption=None

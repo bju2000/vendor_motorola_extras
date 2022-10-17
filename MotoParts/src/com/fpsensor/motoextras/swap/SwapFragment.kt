@@ -13,11 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.eurekateam.samsungextras.swap
+package com.fpsensor.motoextras.swap
+
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.widget.Switch
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
@@ -25,10 +24,9 @@ import androidx.preference.PreferenceManager
 import androidx.preference.SeekBarPreference
 import com.android.settingslib.widget.MainSwitchPreference
 import com.android.settingslib.widget.OnMainSwitchChangeListener
-import com.eurekateam.samsungextras.R
-import com.eurekateam.samsungextras.interfaces.Swap
-import java.util.concurrent.ScheduledThreadPoolExecutor
-import java.util.concurrent.TimeUnit
+import com.fpsensor.motoextras.R
+import com.fpsensor.motoextras.interfaces.Swap
+import java.lang.Thread
 
 class SwapFragment : PreferenceFragmentCompat(), Preference.OnPreferenceChangeListener, OnMainSwitchChangeListener {
     private lateinit var mSwapSizePref: SeekBarPreference
@@ -36,9 +34,6 @@ class SwapFragment : PreferenceFragmentCompat(), Preference.OnPreferenceChangeLi
     private lateinit var mSwapEnable: MainSwitchPreference
     private lateinit var mFreeSpace: Preference
     private lateinit var mSwapFileSize: Preference
-    private var mPoolExecutor = ScheduledThreadPoolExecutor(3)
-    private var mSwapSize = 0
-    private val mSwap = Swap()
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         addPreferencesFromResource(R.xml.swap_settings)
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireContext())
@@ -51,54 +46,37 @@ class SwapFragment : PreferenceFragmentCompat(), Preference.OnPreferenceChangeLi
         mSwapEnable.isChecked = mSharedPreferences.getBoolean(PREF_SWAP_ENABLE, false)
         mSwapEnable.addOnSwitchChangeListener(this)
         mSwapSizePref.isEnabled = !mSwapEnable.isChecked
-        mSwapSizePref.showSeekBarValue = true
         mFreeSpace = findPreference(INFO_FREE_SPACE)!!
-        mFreeSpace.summary = "${mSwap.getFreeSpace()} GB"
+        mFreeSpace.summary = "${Swap.getFreeSpace()} GB"
         mSwapFileSize = findPreference(INFO_SWAP_FILE_SIZE)!!
-        mSwapFileSize.summary = "${mSwap.getSwapSize()} MB"
-        mPoolExecutor.scheduleWithFixedDelay(mScheduler, 0, 2, TimeUnit.SECONDS)
+        mSwapFileSize.summary = "${Swap.getSwapSize()} MB"
     }
-    private val mScheduler = Runnable { requireActivity().runOnUiThread { mSwapEnable.isEnabled = !mSwap.isLocked() } }
+
     override fun onPreferenceChange(preference: Preference, newValue: Any): Boolean {
         if (preference == mSwapSizePref) {
             val value = newValue as Int
-            mSwapSize = value
+            Swap.setSize(value)
             mSharedPreferences.edit().putInt(PREF_SWAP_SIZE, value).apply()
-            mFreeSpace.summary = "${mSwap.getFreeSpace()} GB"
-            val mHandler = Handler(Looper.getMainLooper())
-            mSwapFileSize.summary = "${mSwapSize * 10} MB applied on next enable"
-            mHandler.postDelayed({ mSwapFileSize.summary = "${mSwap.getSwapSize()} MB" }, 1500)
+            mFreeSpace.summary = "${Swap.getFreeSpace()} GB"
+            mSwapFileSize.summary = "${Swap.getSwapSize()} MB"
             return true
         }
         return false
     }
 
-    // This is called from native - DO NOT CHANGE SIGNATURE
-    fun reactToCallbackNative(res: Boolean) {
-        if (!res) {
-            mSwap.delFile()
-            mSharedPreferences.edit().putBoolean(PREF_SWAP_ENABLE, false).apply()
-            mSwapSizePref.isEnabled = true
-        }
-        mSwapFileSize.summary = "${mSwap.getSwapSize()} MB"
-    }
     override fun onSwitchChanged(switchView: Switch, isChecked: Boolean) {
         mSwapEnable.isEnabled = false
-        val mSwap = Swap()
-        if (isChecked) {
-            mSwap.mkFile(mSwapSize)
-            mSwap.setSwapOn(true)
-        } else {
-            mSwap.setSwapOff()
-            mSwap.delFile()
-        }
-        mSwapEnable.isEnabled = true
-        mSharedPreferences.edit().putBoolean(PREF_SWAP_ENABLE, isChecked).apply()
-        mSwapSizePref.isEnabled = !isChecked
-        mFreeSpace.summary = "${mSwap.getFreeSpace()} GB"
-        mSwapFileSize.summary = "${mSwap.getSwapSize()} MB"
-    }
-
+        Thread {
+            Swap.setSwapOn(isChecked)
+            requireActivity().runOnUiThread {
+                mSwapEnable.isEnabled = true
+                mSharedPreferences.edit().putBoolean(PREF_SWAP_ENABLE, isChecked).apply()
+                mSwapSizePref.isEnabled = !isChecked
+		mFreeSpace.summary = "${Swap.getFreeSpace()} GB"
+		mSwapFileSize.summary = "${Swap.getSwapSize()} MB"
+            }
+        }.start()
+    } 
     companion object {
         const val PREF_SWAP_SIZE = "swap_size"
         const val PREF_SWAP_ENABLE = "swap_enable"

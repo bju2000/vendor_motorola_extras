@@ -13,7 +13,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-   <string name="advanced_settings">SamsungParts</string>
+   <string name="advanced_settings">MotoParts</string>
    <string name="advanced_settings_summary">Device specific tweaks</string>
    <string name="not_shown">Not shown due to user settings</string>
    <string name="show_data">Show the battery data</string>
@@ -29,6 +29,8 @@
    <string name="clear_speaker_title">Clear speaker</string>
    <string name="clear_speaker_summary">Play a 30-second audio to clear the speaker</string>
    <string name="clear_speaker_description">Run this feature once or twice if you find that your speaker is lightly blocked by dust. Set media volume to maximum.\n\nIf the speaker is blocked heavily, run this feature 2–5 times while shaking your device with the speaker facing downwards.</string>
+   <!-- Eureka Kernel features category -->
+   <string name="eureka_kernel_features">Eureka Kernel Features</string>
    <string name="swap_title">Swap on userdata</string>
    <string name="swap_enable_title">Enable swap on EMMC</string>
    <string name="swap_size_title">Swap size</string>
@@ -60,20 +62,4 @@
    <string name="switch_bar_on">On</string>
    <!-- Label for feature switch -->
    <string name="switch_bar_off">Off</string>
-   <!-- SmartCharge -->
-   <string name="smartcharge_title">Simple SmartCharge Implementation</string>
-   <string name="smartcharge_switch">Enable The Implementation</string>
-   <string name="choose_limit_title">Adjust Charge Limit %</string>
-   <string name="choose_summary">Tap here to adjust the settings</string>
-   <string name="choose_restart_title">Adjust Charge Restart %</string>
-   <string name="limit_title">Current Limit Charge % Setting</string>
-   <string name="restart_title">Current Restart Charge % Setting</string>
-   <string name="limit_stat_title">Stats of limited charging count since last boot</string>
-   <string name="restart_stat_title">Stats of restarted charging count since last boot</string>
-   <string name="apply">Apply current settings</string>
-   <string name="adjust_title">Move the seekbar to adjust values</string>
-   <string name="adjust_summary">From the most left, the value will move by -10 -1 0 1 10</string>
-   <string name="smartcharge_description">This is a simple smartcharge implementation based on
-	   battery percentage. If the battery percent is above limit, the charging stops, or if it is 
-	   below restart, it charges again. Said to improve battery life in long term</string>
 </resources>

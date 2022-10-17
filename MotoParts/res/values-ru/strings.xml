@@ -13,7 +13,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-   <string name="advanced_settings">Опции Samsung</string>
+   <string name="advanced_settings">Опции Moto</string>
    <string name="advanced_settings_summary">Дополнительные функции устройства</string>
    <!-- Display category -->
    <string name="display_category">Экран</string>
@@ -53,20 +53,4 @@
    <string name="custom_seekbar_default_value">По-умолчанию</string>
    <string name="custom_seekbar_default_value_to_set">Значение по-умолчанию: <xliff:g id="v">%s</xliff:g>\nДлительное нажатие для настройки</string>
    <string name="custom_seekbar_default_value_is_set">Установлено значение по-умолчанию</string>
-   <!-- SmartCharge -->
-   <string name="smartcharge_title">Simple SmartCharge Implementation</string>
-   <string name="smartcharge_switch">Enable The Implementation</string>
-   <string name="choose_limit_title">Adjust Charge Limit %</string>
-   <string name="choose_summary">Tap here to adjust the settings</string>
-   <string name="choose_restart_title">Adjust Charge Restart %</string>
-   <string name="limit_title">Current Limit Charge % Setting</string>
-   <string name="restart_title">Current Restart Charge % Setting</string>
-   <string name="limit_stat_title">Stats of limited charging count since last boot</string>
-   <string name="restart_stat_title">Stats of restarted charging count since last boot</string>
-   <string name="apply">Apply current settings</string>
-   <string name="adjust_title">Move the seekbar to adjust values</string>
-   <string name="adjust_summary">From the most left, the value will move by -10 -1 0 1 10</string>
-   <string name="smartcharge_description">This is a simple smartcharge implementation based on
-	   battery percentage. If the battery percent is above limit, the charging stops, or if it is 
-	   below restart, it charges again. Said to improve battery life in long term</string>
 </resources>

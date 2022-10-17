@@ -1,6 +1,0 @@
-# MotoParts
-vendor.fpsensor.hardware.parts.IBatteryStats u:object_r:hal_parts_service:s0
-vendor.fpsensor.hardware.parts.IFlashBrightness u:object_r:hal_parts_service:s0
-vendor.fpsensor.hardware.parts.IDisplayConfigs u:object_r:hal_parts_service:s0
-vendor.fpsensor.hardware.parts.ISwapOnData u:object_r:hal_parts_service:s0
-vendor.fpsensor.hardware.parts.ISmartCharge u:object_r:hal_parts_service:s0

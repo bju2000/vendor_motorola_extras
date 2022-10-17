@@ -16,19 +16,10 @@
 
 package com.fpsensor.motoextras.interfaces
 
-import android.os.ServiceManager
-import vendor.fpsensor.hardware.parts.DisplaySys
-import vendor.fpsensor.hardware.parts.IDisplayConfigs
-
-class Display {
-    private val mDisplay: IDisplayConfigs
-
-    init {
-        mDisplay = IDisplayConfigs.Stub.asInterface(ServiceManager.waitForDeclaredService("vendor.eureka.hardware.parts.IDisplayConfigs/default"))
-    }
-
+object Display {
     var DT2W: Boolean = false
-        set(k) = mDisplay.writeDisplay(k, DisplaySys.DOUBLE_TAP)
+        external set
+
     var GloveMode: Boolean = false
-        set(k) = mDisplay.writeDisplay(k, DisplaySys.GLOVE_MODE)
+        external set
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.fpsensor.motoextras.fps
+package com.eurekateam.samsungextras.fps
 
 import android.app.Service
 import android.content.BroadcastReceiver
@@ -28,7 +28,7 @@ import android.util.Log
 import android.view.Gravity
 import android.view.View
 import android.view.WindowManager
-import com.fpsensor.motoextras.SurfaceFlingerFPS
+import com.eurekateam.samsungextras.SurfaceFlingerFPS
 import kotlin.math.roundToInt
 
 open class FPSInfoService : Service() {
@@ -78,8 +78,7 @@ open class FPSInfoService : Service() {
             val y = mPaddingTop - mAscent.toInt()
             val s = fPSInfoString
             canvas.drawText(
-                s,
-                (LEFT - mPaddingLeft - mMaxWidth).toFloat(),
+                s, (LEFT - mPaddingLeft - mMaxWidth).toFloat(),
                 (
                     y - 1
                     ).toFloat(),

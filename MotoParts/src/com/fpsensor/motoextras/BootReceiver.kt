@@ -27,14 +27,9 @@ class BootReceiver : BroadcastReceiver() {
                         .getBoolean(BatteryFragment.PREF_FASTCHARGE, true)
                     ) 0 else 1
                 )
-
                 // ZRAM
-                val mSwap = Swap()
-                if (mSharedPreferences.getBoolean(SwapFragment.PREF_SWAP_ENABLE, false)) {
-                    mSwap.setSwapOn(false)
-                } else {
-                    mSwap.setSwapOff()
-                }
+                Swap.setSize(mSharedPreferences.getInt(SwapFragment.PREF_SWAP_SIZE, 50))
+                Swap.setSwapOn(mSharedPreferences.getBoolean(SwapFragment.PREF_SWAP_ENABLE, false))
 
                 // Display
                 Display.DT2W = mSharedPreferences.getBoolean(DeviceSettings.PREF_DOUBLE_TAP, true)

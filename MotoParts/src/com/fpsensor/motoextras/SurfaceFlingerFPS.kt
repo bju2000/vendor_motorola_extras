@@ -3,6 +3,11 @@ package com.fpsensor.motoextras
 import android.os.Parcel
 import android.os.ServiceManager
 
+/*
+ *  Copyright (C) 2020-2021 moto Electronics Co. Ltd
+ *  This Class is based on moto's OneUI 3.1
+ *  /system/frameworks/gamesdk.jar
+ */
 class SurfaceFlingerFPS private constructor() {
     private var mFps: Double
     private val mLock: Any = Any()
