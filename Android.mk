@@ -29,10 +29,6 @@ PRODUCT_PACKAGES += \
     MotoLiveWallpaper3 
 endif
 
-ifeq ($(MOTOPARTS), true)
-$(call inherit-product, vendor/motorola/extras/MotoDolby/config.mk)
-endif
-
 ifeq ($(MOTOEXTRAS_WIDGET), true)
 PRODUCT_PACKAGES += \
     MotoClockWidget

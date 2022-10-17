@@ -1,6 +1,7 @@
 # Motorola specific device features 
 
-This is a vendor addon to add in your android builds to get moto specific things like moto dolby, live walls and more
+This is a vendor addon to add in your android builds to get moto specific things like moto dolby, live walls and more  
+**WARNING! This apps exept MotoParts are for 64 Bit devices**
 
 ## How to add in your builds
 
@@ -27,11 +28,12 @@ MOTOEXTRAS_LIVEWALLS := true
 ```
 
 ```
-MOTOPARTS := true
+$(call inherit-product, vendor/motorola/extras/MotoParts/Android.mk)
 ```
 This MotoParts by FPSensor but is based in [Eureka Team](https://github.com/eurekadevelopment) SamsungParts
 
 ```
 MOTOEXTRAS_WIDGET := true
 ```
+
 And thank you very much [Royna](https://github.com/roynatech2544) for all of your help wen making this.
