@@ -3,7 +3,7 @@
 #include <hidl/HidlSupport.h>
 #include <hidl/LegacySupport.h>
 #include <hidl/Status.h>
-#include <vendor/moto/hardware/parts/1.0/IBatteryStats.h>
+#include <vendor/fpsensor/hardware/parts/1.0/IBatteryStats.h>
 
 using android::sp;
 using vendor::fpsensor::hardware::parts::V1_0::IBatteryStats;
